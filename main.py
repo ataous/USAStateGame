@@ -13,8 +13,7 @@ def get_guess(last_score):
     prompt = "What's another State's name (If you can't type \"Exit\")?"
     if last_score == 0:
         prompt = "What's State's name (If you can't type \"Exit\")?"
-    inp_state = screen.textinput(title=title, prompt=prompt).title()
-    return inp_state
+    return screen.textinput(title=title, prompt=prompt).title()
 
 
 screen = turtle.Screen()
@@ -30,6 +29,7 @@ t.penup()
 
 data = pd.read_csv(FILE_PATH)
 score = 0
+
 while True:
     guess = get_guess(score)
     if guess == "Exit":
